@@ -1,3 +1,28 @@
+//Model to dreat class for the cards below 
+class Deck {
+    constructor(card) {
+        this.deckOfCards[] = card
+    }
+    shuffleDeck() {
+        let shuffledCard = [Math.floor((Math.random()*deckOfCards.length))];
+        deckOfCards.push[shuffledCard];
+        newDeck = this.deckOfCards -
+    }
+}
+class Card {
+    constructor(rank, suit, cardIDnum) {
+        this.rank = rank;
+        this.suit = suit;
+        this.cardIDnum = cardIDnum
+    }
+    draw() {
+        let card = [Math.floor((Math.random()*deckOfCards.length))];
+        drawnCard = card
+    }
+}
+
+
+
 const deckOfCards = [
     ace_of_spades = {
         rank: 14,
@@ -278,3 +303,62 @@ function randomCard() {
     };
 }
 randomCard()
+
+
+
+
+
+
+
+
+
+
+// Hammad's Walkthrough
+
+class Card {
+    constructor(rank, suit, cardIDnum) {
+        this.rank = rank;
+        this.suit = suit;
+        this.cardIDnum = cardIDnum
+    }
+}
+
+class Deck {
+    constructor() {
+        this.cards = []
+
+        let ranks = [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "J",
+            "Q",
+            "K",
+            "A"
+        ]
+
+        let suits = [
+            "spade",
+            "heart",
+            "diamond",
+            "club"
+        ]
+        for (let i = 0; i < ranks.length; i++) {
+            for (let j = 0; j < suits.length; j++) {
+                let rank = ranks[i]
+                let suit = [j]
+                let value = i
+
+                this.cards.push(new Card(rank, suit, value))
+            }
+        }
+    }
+}
+
+const deck = new Deck ()
