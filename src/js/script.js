@@ -1,5 +1,5 @@
 //Model to dreat class for the cards below 
-class Deck {
+/*class Deck {
     constructor(card) {
         this.deckOfCards[] = card
     }
@@ -19,10 +19,10 @@ class Card {
         let card = [Math.floor((Math.random()*deckOfCards.length))];
         drawnCard = card
     }
-}
+}*/
 
 
-
+/*
 const deckOfCards = [
     ace_of_spades = {
         rank: 14,
@@ -303,7 +303,7 @@ function randomCard() {
     };
 }
 randomCard()
-
+*/
 
 
 
@@ -361,4 +361,43 @@ class Deck {
     }
 }
 
+function reDraw() {
+    let card3 = [Math.floor((Math.random()*deck.cards.length))];
+    console.log(card3);
+    let chosenCard3 = deck.cards[card3];
+    console.log(chosenCard3);
+    let card4 = [Math.floor((Math.random()*deck.cards.length))];
+    console.log(card4);
+    let chosenCard4 = deck.cards[card4];
+    console.log(chosenCard4);
+        if (deck.cards[card3].rank > deck.cards[card4].rank) {
+            console.log("Player 1 wins!")
+        } else if (deck.cards[card3].rank < deck.cards[card4].rank) {
+            console.log("Player 2 wins!")
+        } else (console.log("Tie!"))
+
+        }
+
+
 const deck = new Deck ()
+
+console.log(deck.cards);
+
+function randomCard() {
+    let card1 = [Math.floor((Math.random()*deck.cards.length))];
+    console.log(card1);
+    let chosenCard1 = deck.cards[card1];
+    console.log(chosenCard1);
+    let card2 = [Math.floor((Math.random()*deck.cards.length))];
+    console.log(card2);
+    let chosenCard2 = deck.cards[card2];
+    console.log(chosenCard2);
+    if (deck.cards[card1].rank > deck.cards[card2].rank) {
+        console.log("Player 1 wins!")
+    } else if (deck.cards[card1].rank < deck.cards[card2].rank) {
+        console.log("Player 2 wins!")
+    } else {
+        reDraw ()
+    };
+}
+randomCard()
