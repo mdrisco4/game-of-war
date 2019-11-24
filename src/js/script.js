@@ -1,4 +1,4 @@
-//Model to dreat class for the cards below 
+//Model to create class for the cards below 
 /*class Deck {
     constructor(card) {
         this.deckOfCards[] = card
@@ -328,19 +328,19 @@ class Deck {
         this.cards = []
 
         let ranks = [
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "J",
-            "Q",
-            "K",
-            "A"
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
         ]
 
         let suits = [
@@ -357,9 +357,78 @@ class Deck {
 
                 this.cards.push(new Card(rank, suit, value))
             }
+        // SHUFFLE METHOD HERE
         }
     }
 }
+
+const deck = new Deck ()
+
+
+
+player1 = deck.cards.splice[0,26]
+console.log(player1)
+
+
+
+for(let i = 0; i < deck.cards.length; i++) {
+    let shuffledCard = [Math.floor((Math.random()*deck.cards.length))];
+    deck.cards.splice(i,1);
+    console.log(shuffledCard);
+    console.log("stop")
+    for(let i = 0; i < shuffledCard.length; i++) {
+        let shuffledDeck = [];
+        shuffledDeck.push(shuffledCard);
+        console.log(shuffledDeck)
+    }
+    // let shuffledDeck = [];
+    // freshDeck = shuffledDeck.push(shuffledCard);
+// console.log(freshDeck[0])
+}
+console.log("SPLIT LOOPS")
+// j = 0;
+// while(j < deck.cards.length) {
+//     let shuffledCardw = [Math.floor((Math.random()*deck.cards.length))];
+//     deck.cards.splice(j,1);
+//     j++;
+//     console.log(shuffledCardw);
+//     console.log("WAIT")
+//     for(let i = 0; i < shuffledCardw.length; i++) {
+//         let shuffledDeckw = [];
+//         shuffledDeckw.push(shuffledCardw);
+//         console.log(shuffledDeckw)
+//     }
+// }
+
+
+
+j = 0;
+let shuffledDeckw = [];
+while(j < deck.cards.length) {
+    let shuffledCardw = [Math.floor((Math.random()*deck.cards.length))];
+    deck.cards.splice(j,1);
+    // let shuffledDeckw = [];
+    shuffledDeckw.push(shuffledCardw[j]);
+    j++;
+    console.log(shuffledCardw);
+    console.log(shuffledDeckw)
+    console.log("WAIT")
+    // for(let i = 0; i < shuffledCardw.length; i++) {
+    //     let shuffledDeckw = [];
+    //     shuffledDeckw.push(shuffledCardw);
+    //     console.log(shuffledDeckw)
+    // }
+}
+
+
+
+
+
+
+
+
+
+
 
 function reDraw() {
     let card3 = [Math.floor((Math.random()*deck.cards.length))];
@@ -375,13 +444,21 @@ function reDraw() {
         } else if (deck.cards[card3].rank < deck.cards[card4].rank) {
             console.log("Player 2 wins!")
         } else (console.log("Tie!"))
+    }
 
-        }
+
+// const deck = new Deck ()
 
 
-const deck = new Deck ()
 
-console.log(deck.cards);
+
+// player1 = deck.slice(26,52);
+// player2 = deck.slice(0,26);
+// console.log(player1);
+// console.log(player2);
+
+
+// console.log(deck.cards);
 
 function randomCard() {
     let card1 = [Math.floor((Math.random()*deck.cards.length))];
