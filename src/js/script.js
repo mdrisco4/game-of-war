@@ -1,9 +1,10 @@
 // Hammad's Walkthrough
 
 class Card {
-    constructor(rank, suit) {
+    constructor(rank, suit, actualCard) {
         this.rank = rank;
         this.suit = suit;
+        this.actualCard = [];
     }
 }
 
@@ -40,15 +41,57 @@ class Deck {
                 let rank = ranks[i]
                 let suit = suits[j]
 
+
+        // this.cards.push(new Card(rank, suit)
+
+
+        // for (i = 0; i < 52; i++) {
+        //     if (rank > 1 && rank < 11) {
+        //         let actualCard = rank;
+        //     } else if (rank = 11) {
+        //         let actualCard = "jack"
+        //     } else if (rank = 12) {
+        //         let actualCard = "queen"
+        //     } else if (rank = 13) {
+        //         let actualCard = "king"
+        //     } else {let actualCard = "ace"}
+        //         }
+
                 this.cards.push(new Card(rank, suit))
                 }
+                // for (i = 0; i < 52; i++) {
+                //     if (Card.rank > 1 && Card.rank < 11) {
+                //         let this.cards.actualCard = Card.rank;
+                //     } else if (Card.rank = 11) {
+                //         let Card.actualCard = "jack"
+                //     } else if (rank = 12) {
+                //         let Card.actualCard = "queen"
+                //     } else if (rank = 13) {
+                //         let Card.actualCard = "king"
+                //     } else {let Card.actualCard = "ace"}
+                //         }
+                        
             }
         }
     } 
     const deck = new Deck ()
 
+    console.log(deck.cards[2].suit)
+    
+// for (i = 0; i < deck.cards.length; i++) {
+//     if (deck.cards.rank > 1 && deck.cards.rank < 11) {
+//         deck.cards.actualCard = deck.cards.rank;
+//     } else if (deck.cards.rank == 11) {
+//         deck.cards.actualCard == "jack"
+//     } else if (deck.cards.rank == 12) {
+//         deck.cards.actualCard == "queen"
+//     } else if (deck.cards.rank == 13) {
+//         deck.cards.actualCard == "king"
+//     } else {deck.cards.actualCard == "ace"}
+// }
+console.log(deck.cards.actualCard)
 
-
+ 
 
 
 
@@ -80,26 +123,26 @@ console.log(player1);
 console.log(player2);
 
 
-function war() {
-    let card3 = player1.shift();
-    console.log(card1);
-    console.log(player1);
-    let card4 = player2.shift();
-    console.log(card2);
-    console.log(player2);
-    if (card3.rank > card4.rank) {
-        console.log("Player one wins!");
-        player1.push(card1, card2, card3, card4)
-        console.log(player1);
-        console.log(player2)
-    } else if (card3.rank < card4.rank) {
-        console.log("Player two wins!")
-        player2.push(card1, card2, card3, card4)
-        console.log(player1);
-        console.log(player2);    
-    } else {console.log("Tie!")
-}
-}
+// function war() {
+//     let card3 = player1.shift();
+//     console.log(card1);
+//     console.log(player1);
+//     let card4 = player2.shift();
+//     console.log(card2);
+//     console.log(player2);
+//     if (card3.rank > card4.rank) {
+//         console.log("Player one wins!");
+//         player1.push(card1, card2, card3, card4)
+//         console.log(player1);
+//         console.log(player2)
+//     } else if (card3.rank < card4.rank) {
+//         console.log("Player two wins!")
+//         player2.push(card1, card2, card3, card4)
+//         console.log(player1);
+//         console.log(player2);    
+//     } else {console.log("Tie!")
+// }
+// }
 
 
 
@@ -115,13 +158,47 @@ function playWar() {
         console.log("Player one wins!");
         player1.push(card1, card2)
         console.log(player1);
-        console.log(player2)
+        console.log(player2);
+        return;
     } else if (card1.rank < card2.rank) {
         console.log("Player two wins!")
         player2.push(card1, card2)
         console.log(player1);
-        console.log(player2);    
-    } else {console.log("Tie!")
+        console.log(player2);
+        return;    
+    } else {console.log("WAR!")
+
+    function war() {
+        let card3 = player1.shift();
+        console.log(card3);
+        console.log(player1);
+        let card4 = player2.shift();
+        console.log(card4);
+        console.log(player2);
+        if (card3.rank > card4.rank) {
+            console.log("Player one wins!");
+            player1.push(card1, card2, card3, card4)
+            console.log(player1);
+            console.log(player2);
+            return;
+        } else if (card3.rank < card4.rank) {
+            console.log("Player two wins!")
+            player2.push(card1, card2, card3, card4)
+            console.log(player1);
+            console.log(player2);
+            return;    
+        } else {console.log("Tie!")
+    }
+    }
+
+
+
+
+
+
+
+
+
     war()}
 }
 playWar()
